@@ -9,6 +9,20 @@ var passwordCriteria = {
   speialChar: ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', '\\', '/', '<', '>', '?', '.', ',', ':', ';'],
   numbers: [0,1,2,3,4,5,6,7,]
 }
+var AlphabetCriteria = 'abcdefghijklmnopqrstuvwxyz';
+var specialChar = 
+
+
+var alphaConfirm = window.confirm("Would you like uppercase letters")
+if (alphaConfirm) {
+  generateAlpha()
+}
+
+
+function generateAlpha() {
+
+}
+
 function generatePassword() {
   var rando = Math.floor(Math.random() * passwordCriteria.alphabet.map )
   var randoNum = Math.floor(Math.random() * passwordCriteria.numbers.length)
