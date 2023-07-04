@@ -7,19 +7,21 @@ var number = "0123456789"
 var generateBtn = document.querySelector("#generate");
 
 
-generateBtn.addEventListener('click', function() {
+
+generateBtn.addEventListener('click', function(num) {
+  var passLength = Number(window.prompt("How long would you like the password to be?"))
   var alphaConfirm = window.confirm("Would you like letters")
   var NumConfirm = window.confirm("Would you like to use numbers?")
   var SpecCharConfirm = window.confirm("Would you like to use special characters?")
-  var passLength = Number(window.prompt("How long would you like the password to be?"))
+
 
   console.log(passLength)
 
  if (alphaConfirm && NumConfirm && SpecCharConfirm) {
-  generatePassword()
+  generatePassword(num)
   
  } else if (alphaConfirm && NumConfirm) {
-  generateAlphabet()
+  generateAlphabet(num)
   generateNum()
   console.log()
  } else if (alphaConfirm && SpecCharConfirm) {
@@ -60,7 +62,8 @@ function generateRandoChar() {
 }
 
 
-function generatePassword() {
+function generatePassword(num) {
+  var alphNum = AlphabetCriteria.num 
   var randoChar = Math.floor(Math.random() * AlphabetCriteria.length)
   var randoNum = Math.floor(Math.random() * number.length)
   var randoSpecChar = Math.floor(Math.random() * specialChar.length)
@@ -70,7 +73,7 @@ function generatePassword() {
   var resNum = number[randoNum]
   var resSpecChar = specialChar[randoSpecChar]
 
-  var result = resChar + '' + resNum + '' + resSpecChar 
+  var result = resChar +  resNum + resSpecChar 
 
 
  return result
