@@ -4,13 +4,14 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-var passwordCriteria = {
-  alphabet: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-  speialChar: ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', '\\', '/', '<', '>', '?', '.', ',', ':', ';'],
-  numbers: [0,1,2,3,4,5,6,7,]
-}
+// var passwordCriteria = {
+//   alphabet: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+//   speialChar: ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', '\\', '/', '<', '>', '?', '.', ',', ':', ';'],
+//   numbers: [0,1,2,3,4,5,6,7,]
+// }
 var AlphabetCriteria = 'abcdefghijklmnopqrstuvwxyz';
-var specialChar = 
+var specialChar = "!@#$%^&*()-_+=[{]}\|;:',<.>/?"
+var number = "0123456789"
 
 
 var alphaConfirm = window.confirm("Would you like uppercase letters")
@@ -20,7 +21,7 @@ if (alphaConfirm) {
 
 
 function generateAlpha() {
-
+  
 }
 
 function generatePassword() {
