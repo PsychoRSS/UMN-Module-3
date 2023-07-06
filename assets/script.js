@@ -14,7 +14,7 @@ generateBtn.addEventListener('click', function() {
   var SpecCharConfirm = window.confirm("Would you like to use special characters?")
 
 
- if (alphaConfirm && NumConfirm && SpecCharConfirm) {
+ if (alphaConfirm && NumConfirm && SpecCharConfirm) {// -----------------------------------------------------------------------------------------------
   GenwritePassword()
  } else if (alphaConfirm && NumConfirm) {
   AlphNumWritePassword()
