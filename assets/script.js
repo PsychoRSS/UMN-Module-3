@@ -7,16 +7,24 @@ var passLength
 
 var generateBtn = document.querySelector("#generate");
 
+
+// -----------------------------------------------------------------------------------------------
+
+
 generateBtn.addEventListener('click', function() {
-  passLength = Number(window.prompt("How long would you like the password to be?"))
+  passLength = Number(window.prompt("How long would you like the password to be? It must be a minnimum of 8 charcters and a maximum of 128"))
   var alphaConfirm = window.confirm("Would you like capital letters?")
   var NumConfirm = window.confirm("Would you like to use numbers?")
   var SpecCharConfirm = window.confirm("Would you like to use special characters?")
 
 
- if (alphaConfirm && NumConfirm && SpecCharConfirm) {// -----------------------------------------------------------------------------------------------
-  GenwritePassword()
- } else if (alphaConfirm && NumConfirm) {
+ if (passLength < "8") {
+  window.confirm("Please try again your passsword was to short")
+  return 
+}else if (passLength > 128) {
+  window.confirm("Please shorten your password. Thank you!")
+  return
+}else if (alphaConfirm && NumConfirm) {
   AlphNumWritePassword()
  } else if (alphaConfirm && SpecCharConfirm) {
   AlphNumWritePassword()
@@ -26,10 +34,10 @@ generateBtn.addEventListener('click', function() {
   capitalsWritePassword()
  }else if (NumConfirm) {
   numsWritePassword()
- } else {
+ } else if (SpecCharConfirm) {
   SpecCharWritePassword()
- }
-
+ } else if(alphaConfirm && NumConfirm && SpecCharConfirm)
+  GenwritePassword()
 })
 
 
